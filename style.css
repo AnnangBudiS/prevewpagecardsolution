@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    padiing:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    max-width: 1440;
+}
+p {
+    font-size: 14px;
+    font-family: 'Montserrat',sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+h1 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    padding: 20px 0;
+}
+h2{
+    color: hsl(158, 36%, 37%);
+    padding: 20px 0; 
+    font-family: 'Fraunces', serif; 
+}
+.hero {
+    grid-area: hero;
+    width: 100%;
+    height: max-content;
+    border-radius: 12px 0 0 12px;
+}
+
+.card{
+    display: grid;
+    width: 550px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "hero content";
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px 0 rgba(0,0,0, .4);
+    margin: 10% 30%;
+}
+
+.content {
+    grid-area: content;
+    margin: 20px ;
+}
+.price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discount{
+    text-decoration: line-through;
+}
+
+.wrappper{
+    display: flex;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 12px;
+    background-color: hsl(158, 36%, 37%);
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.wrappper > p {
+    position: relative;
+    left: 10px;
+    color: #fff;
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    color: hsl(228, 12%, 48%);
+    
+}
+a {
+    text-decoration: none;
+    color:hsl(228, 12%, 48%) ;
+    font-family: 'Montserrat', sans-serif;
+}
+@media screen and (max-width :900px){
+    .card{
+        margin: 35% 18%;
+    }
+}
+@media screen and (max-width: 600px){
+    .card {
+        max-width: 360px;
+        grid-template-columns: auto;
+        grid-template-areas: "hero"
+        "content";
+        margin: 30px;
+        
+    }
+    .hero{
+        border-radius: 12px 12px 0 0;
+        max-height: 300px;
+    }
+    .attribution{
+        font-size: 14px;
+        margin: 100px 0 10px;
+    }
+}
+@media screen and (max-width: 400px){
+    .card{
+        margin: 15px;
+    }
+}
+
+@media screen and (max-width : 375px){
+    .card {
+        max-width: 360px;
+        grid-template-columns: auto;
+        grid-template-areas: "hero"
+        "content";
+        margin:7px;
+    }
+    .hero{
+        width: 360px;
+        height: 300px;
+        border-radius: 12px 12px 0 0;
+    }
+    .attribution{
+        font-size: 14px;
+        margin: 100px 0 10px;
+    }
+}
+@media screen and (max-width: 360px){
+    .card{
+        max-width: 345px;
+        margin: 10px 7.5px;
+    }
+    .hero{
+        max-width: 345px;
+    }
+}
+
+
+
